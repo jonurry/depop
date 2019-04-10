@@ -8,13 +8,12 @@ export default class Product extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="product">
         <img src={this.product.img} alt={this.product.title} />
-        title brand size price
-        <div>{this.product.title}</div>
-        <div>{this.product.brand}</div>
-        <div>{this.product.size}</div>
-        <div>{this.product.price}</div>
+        <div>{this.product.title ? this.product.title : 'No title'}</div>
+        <div>{this.product.brand ? this.product.brand : 'No brand'}</div>
+        <div>{this.product.size ? this.product.size : 'No size'}</div>
+        <div>£{this.product.price ? this.product.price : 'No price'}</div>
       </div>
     );
   }
