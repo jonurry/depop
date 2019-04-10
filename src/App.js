@@ -17,6 +17,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <div>{this.state.products.length} Results</div>
         <Products products={this.state.products} />
       </div>
     );
