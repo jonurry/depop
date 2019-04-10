@@ -1,35 +1,23 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Products from './Products.js';
 
 class App extends Component {
   constructor(props) {
     super(props);
+    this.state = { products: [] };
     this.api = props.api;
   }
 
   async componentDidMount() {
     let products = await this.api.getProducts();
-    console.log(products);
+    this.setState({ products: products });
   }
 
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+        <Products products={this.state.products} />
       </div>
     );
   }
