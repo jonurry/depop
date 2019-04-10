@@ -3,6 +3,16 @@ import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.api = props.api;
+  }
+
+  async componentDidMount() {
+    let products = await this.api.getProducts();
+    console.log(products);
+  }
+
   render() {
     return (
       <div className="App">
