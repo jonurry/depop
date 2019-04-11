@@ -13,12 +13,18 @@ class App extends Component {
   }
 
   async componentDidMount() {
+    this._isMounted = true;
     let products = await this.api.getProducts();
-    this.setState({ products: products });
+    if (this._isMounted) {
+      this.setState({ products: products });
+    }
+  }
+
+  componentWillUnmount() {
+    this._isMounted = false;
   }
 
   onHideSoldItems() {
-    console.log(this.state.hideSoldItems);
     let newState = !this.state.hideSoldItems;
     this.setState({ hideSoldItems: newState });
   }
