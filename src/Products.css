@@ -1,9 +1,23 @@
+.like {
+  fill: white;
+  height: 20%;
+  position: relative;
+  width: 20%;
+  top: 25%;
+  left: 75%;
+}
+
+.liked {
+  fill: red;
+}
+
 .products {
   align-items: center;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: left;
+  position: relative;
 }
 
 .product {
@@ -17,4 +31,5 @@
 img {
   height: 100%;
   width: 100%;
+  margin-top: -25%;
 }

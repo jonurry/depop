@@ -13,8 +13,10 @@
   color: white;
 }
 
-.results-header {
-  display: flex;
+.btn-hide-sold-items {
+  flex: 0 1 auto;
+  margin: 2.5%;
+  margin: 2.5% 2.5% 0 2.5%;
 }
 
 .number-of-results {
@@ -23,8 +25,6 @@
   margin: 2.5% 2.5% 0 2.5%;
 }
 
-.btn-hide-sold-items {
-  flex: 0 1 auto;
-  margin: 2.5%;
-  margin: 2.5% 2.5% 0 2.5%;
+.results-header {
+  display: flex;
 }

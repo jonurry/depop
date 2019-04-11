@@ -4,12 +4,17 @@ import './Products.css';
 
 export default class Products extends React.Component {
   render() {
-    const { products } = this.props;
+    const { products, onLikeProduct } = this.props;
     return (
       <div className="products">
-        {products.map(product =>
+        {products.map((product, index) =>
           typeof product !== 'undefined' ? (
-            <Product key={product.id} product={product} />
+            <Product
+              key={product.id}
+              product={product}
+              index={index}
+              onLikeProduct={onLikeProduct}
+            />
           ) : (
             ''
           )
