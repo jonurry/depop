@@ -1,3 +1,7 @@
+.hide {
+  display: none;
+}
+
 .like {
   fill: white;
   height: 20%;

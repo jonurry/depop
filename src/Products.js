@@ -4,7 +4,7 @@ import './Products.css';
 
 export default class Products extends React.Component {
   render() {
-    const { products, onLikeProduct } = this.props;
+    const { products, onLikeProduct, hideSoldItems } = this.props;
     return (
       <div className="products">
         {products.map((product, index) =>
@@ -14,6 +14,7 @@ export default class Products extends React.Component {
               product={product}
               index={index}
               onLikeProduct={onLikeProduct}
+              hide={hideSoldItems}
             />
           ) : (
             ''

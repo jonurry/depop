@@ -14,10 +14,13 @@ export default class Product extends React.Component {
   }
 
   render() {
-    const classes = `like ${this.product.liked ? 'liked' : ''}`;
+    const likeClasses = `like ${this.product.liked ? 'liked' : ''}`;
+    const productClasses = `product ${
+      this.props.hide && this.product.sold ? 'hide' : ''
+    }`;
     return (
-      <div className="product">
-        <div className={classes} onClick={this.onLikeProduct}>
+      <div className={productClasses}>
+        <div className={likeClasses} onClick={this.onLikeProduct}>
           <Like />
         </div>
         <img src={this.product.img} alt={this.product.title} />

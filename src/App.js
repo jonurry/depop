@@ -6,7 +6,7 @@ import Footer from './Footer.js';
 class App extends Component {
   constructor(props) {
     super(props);
-    this.state = { products: [] };
+    this.state = { products: [], hideSoldItems: false };
     this.api = props.api;
     this.onHideSoldItems = this.onHideSoldItems.bind(this);
     this.handleLikeProduct = this.handleLikeProduct.bind(this);
@@ -18,7 +18,9 @@ class App extends Component {
   }
 
   onHideSoldItems() {
-    console.log('Hide sold items');
+    console.log(this.state.hideSoldItems);
+    let newState = !this.state.hideSoldItems;
+    this.setState({ hideSoldItems: newState });
   }
 
   handleLikeProduct(index) {
@@ -41,12 +43,13 @@ class App extends Component {
             className="btn-hide-sold-items"
             onClick={this.onHideSoldItems}
           >
-            Hide Sold Items
+            {this.state.hideSoldItems ? 'Show' : 'Hide'} Sold Items
           </button>
         </div>
         <Products
           products={this.state.products}
           onLikeProduct={this.handleLikeProduct}
+          hideSoldItems={this.state.hideSoldItems}
         />
         <Footer />
       </div>
