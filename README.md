@@ -1,68 +1,57 @@
+![A screenshot of the app](./img/screenshot.png)
+
+# Depop
+
+This is a tech test. The specification can be found in [docs/SPEC.md](docs/SPEC.md).
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Overview
 
-In the project directory, you can run:
+I implemented my solution over several sessions as time permitted. I would estimate that after 2 hours I had the products loaded with all attributes from the API and displayed in a flex grid with dummy buttons. I then proceeded to fully implement the like buttons and 'Hide Sold Items' button. Finally, I added tests to make sure that functionality would not regress and completed the documentation.
 
-### `npm start`
+I find it tricky to test react components in a test driven fashion so I got them working first and then added tests. I used the react-test-library framework as I prefer it to enzyme.
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+I separated the UI elements into separate react components in separate files.
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+I used a manual jest mock to mock the API response whilst testing. This means that the tests do not rely on the actual API endpoint and the response is fixed with known data.
 
-### `npm test`
+The like button uses a 'thumbs-up' SVG image. I prefer to use SVG where possible because the image is infinitely scalable without losing detail, the file size is small and can be embedded within the source code instead of being a separate file to be downloaded for increased performance, and it can be manipulated easily in CSS.
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Setup
 
-### `npm run build`
+To get the project code, please enter the following command in the terminal:
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```
+git clone git@github.com:jonurry/depop.git
+```
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+then, change to the newly created code directory:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```
+cd depop
+```
 
-### `npm run eject`
+To install the project dependencies:
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+```
+npm install
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+To run the app in development mode:
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+```
+npm start
+```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+To launch the test runner in interactive watch mode:
 
-## Learn More
+```
+npm test
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+To build the app for production:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+```
+npm run build
+```
