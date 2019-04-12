@@ -20,7 +20,11 @@ export default class Product extends React.Component {
     }`;
     return (
       <div className={productClasses}>
-        <div className={likeClasses} onClick={this.onLikeProduct}>
+        <div
+          className={likeClasses}
+          onClick={this.onLikeProduct}
+          data-testid="like-button"
+        >
           <Like />
         </div>
         <img src={this.product.img} alt={this.product.title} />
