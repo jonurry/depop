@@ -1,5 +1,59 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`should hide sold items 1`] = `
+"Snapshot Diff:
+- First value
++ Second value
+
+@@ -18,18 +18,18 @@
+          6 Results
+        </div>
+        <button
+          class=\\"btn-hide-sold-items\\"
+        >
+-         Hide Sold Items
++         Show Sold Items
+        </button>
+      </div>
+      <div
+        class=\\"products\\"
+      >
+        <div
+-         class=\\"product \\"
++         class=\\"product hide\\"
+        >
+          <div
+            class=\\"like \\"
+            data-testid=\\"like-button\\"
+          >
+@@ -261,11 +261,11 @@
+          <div>
+            £14
+          </div>
+        </div>
+        <div
+-         class=\\"product \\"
++         class=\\"product hide\\"
+        >
+          <div
+            class=\\"like \\"
+            data-testid=\\"like-button\\"
+          >
+@@ -320,11 +320,11 @@
+          <div>
+            £14
+          </div>
+        </div>
+        <div
+-         class=\\"product \\"
++         class=\\"product hide\\"
+        >
+          <div
+            class=\\"like \\"
+            data-testid=\\"like-button\\"
+          >"
+`;
+
 exports[`should match App Snapshot 1`] = `
 <div
   class="App"
