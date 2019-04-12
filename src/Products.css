@@ -12,7 +12,8 @@
 }
 
 .liked {
-  fill: red;
+  background-color: red;
+  border-radius: 10%;
 }
 
 .products {
